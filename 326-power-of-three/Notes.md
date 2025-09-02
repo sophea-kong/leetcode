@@ -1,1 +1,0 @@
-<h2>power-of-three Notes</h2><hr>[ Time taken: 33 m 53 s ]
