@@ -12,9 +12,6 @@ class Solution(object):
         text_dict['l'] = int(text_dict['l']/2)
         text_dict['o'] = int(text_dict['o']/2)
         
-        min = text_dict['a']
-        for i in text_dict.values():
-            if(i<min):
-                min = i
-        return min
+        mins = min(text_dict['b'],text_dict['a'],text_dict['l'],text_dict['o'],text_dict['n'])
+        return mins
         
