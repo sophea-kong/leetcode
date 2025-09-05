@@ -6,13 +6,12 @@ class Solution(object):
         :rtype: bool
         """
         def intoDict(note):
-            note_dict = dict()
+            note_dict = defaultdict(int)
             for i in note:
-                if not i in note_dict:
-                    note_dict[i] = 1
-                else : 
-                    note_dict[i] += 1
+                note_dict[i] += 1
             return note_dict
+
+
         maga_dict = intoDict(magazine)
         for i in ransomNote:
             if i in maga_dict and maga_dict[i] == 1:
