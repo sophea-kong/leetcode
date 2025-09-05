@@ -12,7 +12,6 @@ class Solution(object):
                     continue
                 elif (not board[i][j] in temp_set):
                     temp_set.add(board[i][j])
-                    print(board[i][j])
                 else :
                     return False
         #col
@@ -35,7 +34,6 @@ class Solution(object):
                             continue
                         elif (not (board[i][j] in temp_set)):
                             temp_set.add(board[i][j])
-                            print(board[i][j])
                         else:
                             return False
         return True
