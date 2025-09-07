@@ -11,9 +11,9 @@ class Solution(object):
                 left+=1
             elif (not s[right].isalnum()):
                 right-=1
-            elif (not (s[left].lower() == s[right].lower())):
-                return False
-            else:
+            elif ((s[left].lower() == s[right].lower())):
                 left+=1
                 right-=1
+            else:
+                return False
         return True
