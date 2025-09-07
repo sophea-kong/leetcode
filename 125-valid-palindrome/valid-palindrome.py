@@ -4,8 +4,17 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        new_s = ""
-        for i in s:
-            if(i.isalnum()):
-                new_s+=i
-        return(new_s[::-1].lower() == new_s.lower())
+        left,right = 0,len(s)-1
+        is_palin = True
+        while(left<=right):
+            if(not s[left].isalnum()):
+                print(s[left])
+                left+=1
+            elif (not s[right].isalnum()):
+                right-=1
+            elif (not (s[left].lower() == s[right].lower())):
+                return False
+            else:
+                left+=1
+                right-=1
+        return is_palin
