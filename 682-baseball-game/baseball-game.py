@@ -16,6 +16,4 @@ class Solution(object):
                 result_list.append(result_list[-1]+result_list[-2])
             else :
                 result_list.append(int(i))
-        for i in result_list:
-            total += i
-        return total
+        return sum(result_list)
