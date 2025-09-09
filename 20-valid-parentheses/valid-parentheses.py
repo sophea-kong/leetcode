@@ -14,5 +14,4 @@ class Solution(object):
                     open_stk.pop()
                 else:
                     return False
-        print(open_stk)
         return not open_stk
