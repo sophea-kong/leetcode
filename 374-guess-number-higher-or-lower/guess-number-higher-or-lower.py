@@ -17,7 +17,7 @@ class Solution(object):
             if(guess(mid)==0):
                 return mid
             elif guess(mid)==-1:
-                right = mid
+                right = mid-1
             else:
                 left = mid+1
         return left
