@@ -1,13 +1,17 @@
-class Solution(object):
+class Solution:
     def majorityElement(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        hsh = defaultdict(int)
-        for i in nums:
-            hsh[i] += 1
-        for i in hsh:
-            if hsh[i] > len(nums)/2:
-                return i
+        counter = {}
+        for num in nums:
+            if num in counter:
+                counter[num] += 1
+            else:
+                counter[num] = 1
         
+        max_count = -1
+        ans = -1
+        for key, val in counter.items():
+            if val > max_count:
+                max_count = val
+                ans = key
+        
+        return ans
